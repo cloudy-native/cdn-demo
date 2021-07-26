@@ -1,0 +1,436 @@
+{
+  "version": "12.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "CdnStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://607477397669/us-east-1",
+      "properties": {
+        "templateFile": "CdnStack.template.json",
+        "tags": {
+          "owner": "stephen",
+          "service": "cdn",
+          "version": "0.1.0"
+        },
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/CdnStack": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "owner",
+                "Value": "stephen"
+              },
+              {
+                "Key": "service",
+                "Value": "cdn"
+              },
+              {
+                "Key": "version",
+                "Value": "0.1.0"
+              }
+            ],
+            "trace": [
+              "ConstructNode.addMetadata (/Users/steharrison/source/cdn/node_modules/@aws-cdk/core/lib/construct-compat.ts:252:92)",
+              "Object.addStackArtifactToAssembly (/Users/steharrison/source/cdn/node_modules/@aws-cdk/core/lib/stack-synthesizers/_shared.ts:25:16)",
+              "LegacyStackSynthesizer.emitStackArtifact (/Users/steharrison/source/cdn/node_modules/@aws-cdk/core/lib/stack-synthesizers/stack-synthesizer.ts:29:5)",
+              "LegacyStackSynthesizer.synthesize (/Users/steharrison/source/cdn/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:99:10)",
+              "/Users/steharrison/source/cdn/node_modules/@aws-cdk/core/lib/private/synthesis.ts:184:29",
+              "visit (/Users/steharrison/source/cdn/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/Users/steharrison/source/cdn/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "synthesizeTree (/Users/steharrison/source/cdn/node_modules/@aws-cdk/core/lib/private/synthesis.ts:176:3)",
+              "Object.synthesize (/Users/steharrison/source/cdn/node_modules/@aws-cdk/core/lib/private/synthesis.ts:39:3)",
+              "App.synth (/Users/steharrison/source/cdn/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "process.<anonymous> (/Users/steharrison/source/cdn/node_modules/@aws-cdk/core/lib/app.ts:64:45)",
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)",
+              "process.EventEmitter.emit (domain.js:483:12)",
+              "process.emit (/Users/steharrison/source/cdn/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ],
+        "/CdnStack/certificate/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "certificateEC031123",
+            "trace": [
+              "new Certificate (/Users/steharrison/source/cdn/node_modules/@aws-cdk/aws-certificatemanager/lib/certificate.ts:116:18)",
+              "new CdnStack (/Users/steharrison/source/cdn/lib/cdn-stack.ts:19:25)",
+              "Object.<anonymous> (/Users/steharrison/source/cdn/bin/cdn.ts:21:18)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/steharrison/source/cdn/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/steharrison/source/cdn/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/steharrison/source/cdn/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/steharrison/source/cdn/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/usr/local/Cellar/node@12/12.22.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdnStack/distribution/S3LoggingBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "distributionS3LoggingBucketEE68B787",
+            "trace": [
+              "new Bucket (/Users/steharrison/source/cdn/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:713:22)",
+              "createLoggingBucket (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/core/lib/s3-bucket-helper.ts:71:36)",
+              "s3BucketWithLogging (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/core/lib/s3-bucket-helper.ts:125:21)",
+              "Object.buildS3Bucket (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/core/lib/s3-bucket-helper.ts:33:12)",
+              "new CloudFrontToS3 (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/aws-cloudfront-s3/lib/index.ts:45:58)",
+              "new CdnStack (/Users/steharrison/source/cdn/lib/cdn-stack.ts:23:26)",
+              "Object.<anonymous> (/Users/steharrison/source/cdn/bin/cdn.ts:21:18)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/steharrison/source/cdn/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/steharrison/source/cdn/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/steharrison/source/cdn/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/steharrison/source/cdn/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/usr/local/Cellar/node@12/12.22.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdnStack/distribution/S3LoggingBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "distributionS3LoggingBucketPolicyF82FAA93",
+            "trace": [
+              "new BucketPolicy (/Users/steharrison/source/cdn/node_modules/@aws-cdk/aws-s3/lib/bucket-policy.ts:30:21)",
+              "Bucket.addToResourcePolicy (/Users/steharrison/source/cdn/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:227:21)",
+              "applySecureBucketPolicy (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/core/lib/s3-bucket-helper.ts:41:12)",
+              "createLoggingBucket (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/core/lib/s3-bucket-helper.ts:73:3)",
+              "s3BucketWithLogging (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/core/lib/s3-bucket-helper.ts:125:21)",
+              "Object.buildS3Bucket (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/core/lib/s3-bucket-helper.ts:33:12)",
+              "new CloudFrontToS3 (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/aws-cloudfront-s3/lib/index.ts:45:58)",
+              "new CdnStack (/Users/steharrison/source/cdn/lib/cdn-stack.ts:23:26)",
+              "Object.<anonymous> (/Users/steharrison/source/cdn/bin/cdn.ts:21:18)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/steharrison/source/cdn/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/steharrison/source/cdn/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/steharrison/source/cdn/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/steharrison/source/cdn/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/usr/local/Cellar/node@12/12.22.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdnStack/distribution/S3Bucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "distributionS3Bucket72869558",
+            "trace": [
+              "new Bucket (/Users/steharrison/source/cdn/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:713:22)",
+              "s3BucketWithLogging (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/core/lib/s3-bucket-helper.ts:139:31)",
+              "Object.buildS3Bucket (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/core/lib/s3-bucket-helper.ts:33:12)",
+              "new CloudFrontToS3 (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/aws-cloudfront-s3/lib/index.ts:45:58)",
+              "new CdnStack (/Users/steharrison/source/cdn/lib/cdn-stack.ts:23:26)",
+              "Object.<anonymous> (/Users/steharrison/source/cdn/bin/cdn.ts:21:18)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/steharrison/source/cdn/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/steharrison/source/cdn/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/steharrison/source/cdn/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/steharrison/source/cdn/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/usr/local/Cellar/node@12/12.22.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdnStack/distribution/S3Bucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "distributionS3BucketPolicyB856AA29",
+            "trace": [
+              "new BucketPolicy (/Users/steharrison/source/cdn/node_modules/@aws-cdk/aws-s3/lib/bucket-policy.ts:30:21)",
+              "Bucket.addToResourcePolicy (/Users/steharrison/source/cdn/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:227:21)",
+              "applySecureBucketPolicy (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/core/lib/s3-bucket-helper.ts:41:12)",
+              "s3BucketWithLogging (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/core/lib/s3-bucket-helper.ts:141:3)",
+              "Object.buildS3Bucket (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/core/lib/s3-bucket-helper.ts:33:12)",
+              "new CloudFrontToS3 (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/aws-cloudfront-s3/lib/index.ts:45:58)",
+              "new CdnStack (/Users/steharrison/source/cdn/lib/cdn-stack.ts:23:26)",
+              "Object.<anonymous> (/Users/steharrison/source/cdn/bin/cdn.ts:21:18)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/steharrison/source/cdn/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/steharrison/source/cdn/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/steharrison/source/cdn/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/steharrison/source/cdn/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/usr/local/Cellar/node@12/12.22.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdnStack/distribution/SetHttpSecurityHeaders/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "distributionSetHttpSecurityHeaders0C65E47F",
+            "trace": [
+              "new Function (/Users/steharrison/source/cdn/node_modules/@aws-cdk/aws-cloudfront/lib/function.ts:111:22)",
+              "defaultCloudfrontFunction (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/core/lib/cloudfront-distribution-helper.ts:112:10)",
+              "Object.CloudFrontDistributionForS3 (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/core/lib/cloudfront-distribution-helper.ts:176:26)",
+              "new CloudFrontToS3 (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/aws-cloudfront-s3/lib/index.ts:54:20)",
+              "new CdnStack (/Users/steharrison/source/cdn/lib/cdn-stack.ts:23:26)",
+              "Object.<anonymous> (/Users/steharrison/source/cdn/bin/cdn.ts:21:18)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/steharrison/source/cdn/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/steharrison/source/cdn/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/steharrison/source/cdn/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/steharrison/source/cdn/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/usr/local/Cellar/node@12/12.22.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdnStack/distribution/CloudfrontLoggingBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "distributionCloudfrontLoggingBucket0AC1DCAD",
+            "trace": [
+              "new Bucket (/Users/steharrison/source/cdn/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:713:22)",
+              "Object.createLoggingBucket (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/core/lib/s3-bucket-helper.ts:71:36)",
+              "Object.CloudFrontDistributionForS3 (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/core/lib/cloudfront-distribution-helper.ts:183:21)",
+              "new CloudFrontToS3 (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/aws-cloudfront-s3/lib/index.ts:54:20)",
+              "new CdnStack (/Users/steharrison/source/cdn/lib/cdn-stack.ts:23:26)",
+              "Object.<anonymous> (/Users/steharrison/source/cdn/bin/cdn.ts:21:18)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/steharrison/source/cdn/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/steharrison/source/cdn/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/steharrison/source/cdn/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/steharrison/source/cdn/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/usr/local/Cellar/node@12/12.22.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdnStack/distribution/CloudfrontLoggingBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "distributionCloudfrontLoggingBucketPolicy1091233C",
+            "trace": [
+              "new BucketPolicy (/Users/steharrison/source/cdn/node_modules/@aws-cdk/aws-s3/lib/bucket-policy.ts:30:21)",
+              "Bucket.addToResourcePolicy (/Users/steharrison/source/cdn/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:227:21)",
+              "applySecureBucketPolicy (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/core/lib/s3-bucket-helper.ts:41:12)",
+              "Object.createLoggingBucket (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/core/lib/s3-bucket-helper.ts:73:3)",
+              "Object.CloudFrontDistributionForS3 (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/core/lib/cloudfront-distribution-helper.ts:183:21)",
+              "new CloudFrontToS3 (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/aws-cloudfront-s3/lib/index.ts:54:20)",
+              "new CdnStack (/Users/steharrison/source/cdn/lib/cdn-stack.ts:23:26)",
+              "Object.<anonymous> (/Users/steharrison/source/cdn/bin/cdn.ts:21:18)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/steharrison/source/cdn/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/steharrison/source/cdn/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/steharrison/source/cdn/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/steharrison/source/cdn/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/usr/local/Cellar/node@12/12.22.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdnStack/distribution/CloudFrontDistribution/Origin1/S3Origin/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "distributionCloudFrontDistributionOrigin1S3Origin876B0DC9",
+            "trace": [
+              "new OriginAccessIdentity (/Users/steharrison/source/cdn/node_modules/@aws-cdk/aws-cloudfront/lib/origin-access-identity.ts:80:21)",
+              "S3BucketOrigin.bind (/Users/steharrison/source/cdn/node_modules/@aws-cdk/aws-cloudfront-origins/lib/s3-origin.ts:63:35)",
+              "S3Origin.bind (/Users/steharrison/source/cdn/node_modules/@aws-cdk/aws-cloudfront-origins/lib/s3-origin.ts:33:24)",
+              "Distribution.addOrigin (/Users/steharrison/source/cdn/node_modules/@aws-cdk/aws-cloudfront/lib/distribution.ts:209:39)",
+              "new Distribution (/Users/steharrison/source/cdn/node_modules/@aws-cdk/aws-cloudfront/lib/distribution.ts:147:27)",
+              "Object.CloudFrontDistributionForS3 (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/core/lib/cloudfront-distribution-helper.ts:190:51)",
+              "new CloudFrontToS3 (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/aws-cloudfront-s3/lib/index.ts:54:20)",
+              "new CdnStack (/Users/steharrison/source/cdn/lib/cdn-stack.ts:23:26)",
+              "Object.<anonymous> (/Users/steharrison/source/cdn/bin/cdn.ts:21:18)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/steharrison/source/cdn/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/steharrison/source/cdn/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/steharrison/source/cdn/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/steharrison/source/cdn/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/usr/local/Cellar/node@12/12.22.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdnStack/distribution/CloudFrontDistribution/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "distributionCloudFrontDistribution1B1811AA",
+            "trace": [
+              "new Distribution (/Users/steharrison/source/cdn/node_modules/@aws-cdk/aws-cloudfront/lib/distribution.ts:164:26)",
+              "Object.CloudFrontDistributionForS3 (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/core/lib/cloudfront-distribution-helper.ts:190:51)",
+              "new CloudFrontToS3 (/Users/steharrison/source/cdn/node_modules/@aws-solutions-constructs/aws-cloudfront-s3/lib/index.ts:54:20)",
+              "new CdnStack (/Users/steharrison/source/cdn/lib/cdn-stack.ts:23:26)",
+              "Object.<anonymous> (/Users/steharrison/source/cdn/bin/cdn.ts:21:18)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/steharrison/source/cdn/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/steharrison/source/cdn/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/steharrison/source/cdn/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/steharrison/source/cdn/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/usr/local/Cellar/node@12/12.22.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdnStack/alias/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "alias68BF17F5",
+            "trace": [
+              "new RecordSet (/Users/steharrison/source/cdn/node_modules/@aws-cdk/aws-route53/lib/record-set.ts:119:23)",
+              "new ARecord (/Users/steharrison/source/cdn/node_modules/@aws-cdk/aws-route53/lib/record-set.ts:146:5)",
+              "new CdnStack (/Users/steharrison/source/cdn/lib/cdn-stack.ts:35:21)",
+              "Object.<anonymous> (/Users/steharrison/source/cdn/bin/cdn.ts:21:18)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/steharrison/source/cdn/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/steharrison/source/cdn/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/steharrison/source/cdn/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/steharrison/source/cdn/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/usr/local/Cellar/node@12/12.22.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdnStack/AWSCloudFrontPartitionHostedZoneIdMap": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWSCloudFrontPartitionHostedZoneIdMap",
+            "trace": [
+              "Function.getHostedZoneId (/Users/steharrison/source/cdn/node_modules/@aws-cdk/aws-route53-targets/lib/cloudfront-target.ts:17:7)",
+              "CloudFrontTarget.bind (/Users/steharrison/source/cdn/node_modules/@aws-cdk/aws-route53-targets/lib/cloudfront-target.ts:36:38)",
+              "new RecordSet (/Users/steharrison/source/cdn/node_modules/@aws-cdk/aws-route53/lib/record-set.ts:124:73)",
+              "new ARecord (/Users/steharrison/source/cdn/node_modules/@aws-cdk/aws-route53/lib/record-set.ts:146:5)",
+              "new CdnStack (/Users/steharrison/source/cdn/lib/cdn-stack.ts:35:21)",
+              "Object.<anonymous> (/Users/steharrison/source/cdn/bin/cdn.ts:21:18)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Module.m._compile (/Users/steharrison/source/cdn/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/steharrison/source/cdn/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "main (/Users/steharrison/source/cdn/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/steharrison/source/cdn/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:999:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)",
+              "Module.load (internal/modules/cjs/loader.js:863:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:708:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "/usr/local/Cellar/node@12/12.22.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdnStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/Users/steharrison/source/cdn/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:22:24)",
+              "/Users/steharrison/source/cdn/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/Users/steharrison/source/cdn/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/Users/steharrison/source/cdn/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/Users/steharrison/source/cdn/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/Users/steharrison/source/cdn/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/steharrison/source/cdn/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "process.<anonymous> (/Users/steharrison/source/cdn/node_modules/@aws-cdk/core/lib/app.ts:64:45)",
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)",
+              "process.EventEmitter.emit (domain.js:483:12)",
+              "process.emit (/Users/steharrison/source/cdn/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "CdnStack"
+    }
+  }
+}
